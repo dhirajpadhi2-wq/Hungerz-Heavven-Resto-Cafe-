@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Hungerz Heavven Resto Cafe</title>
+<title>Hunggerz Heavven Resto Cafe</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -19,41 +19,51 @@ font-family:Poppins;
 }
 
 body{
-background:#0b1d3a;
+background:black;
 color:white;
 }
 
+/* HEADER */
+
 header{
-background:#08142c;
+background:black;
 padding:20px;
 text-align:center;
+border-bottom:3px solid orange;
 }
 
 header h1{
-color:#ff3c3c;
-font-size:35px;
+color:orange;
+font-size:38px;
 }
 
 header p{
-color:#ddd;
+color:#ffd000;
 }
 
 nav{
-display:flex;
-justify-content:center;
-gap:30px;
 margin-top:10px;
 }
 
 nav a{
 color:white;
+margin:0 15px;
 text-decoration:none;
 font-weight:500;
 }
 
+nav a:hover{
+color:orange;
+}
+
+/* HERO */
+
 .hero{
-height:70vh;
-background:url('restaurant.jpg') center/cover;
+height:80vh;
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),
+url('restaurant.jpg');
+background-size:cover;
+background-position:center;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -62,15 +72,26 @@ text-align:center;
 
 .hero h2{
 font-size:45px;
-background:rgba(0,0,0,0.6);
-padding:20px;
-border-radius:10px;
+color:white;
 }
+
+.hero span{
+color:orange;
+}
+
+/* SECTION */
 
 .section{
 padding:60px 20px;
 text-align:center;
 }
+
+.section h2{
+color:orange;
+margin-bottom:20px;
+}
+
+/* MENU */
 
 .menu{
 display:grid;
@@ -80,10 +101,17 @@ margin-top:30px;
 }
 
 .card{
-background:#122a55;
+background:#111;
 padding:20px;
 border-radius:10px;
+border:2px solid orange;
 }
+
+.card h3{
+color:yellow;
+}
+
+/* GALLERY */
 
 .gallery{
 display:grid;
@@ -97,22 +125,30 @@ width:100%;
 border-radius:10px;
 }
 
-.call-btn{
+/* BUTTON */
+
+.btn{
 display:inline-block;
 margin-top:20px;
 padding:15px 30px;
-background:#ff3c3c;
-color:white;
+background:orange;
+color:black;
 border-radius:30px;
 text-decoration:none;
 font-weight:600;
 }
 
+.btn:hover{
+background:yellow;
+}
+
+/* FOOTER */
+
 footer{
-background:#08142c;
-padding:20px;
+background:black;
+padding:25px;
 text-align:center;
-margin-top:40px;
+border-top:3px solid orange;
 }
 
 </style>
@@ -123,89 +159,91 @@ margin-top:40px;
 
 <header>
 
-<h1>Hungerz Heavven</h1>
-<p>EAT GOOD, FEEL GOOD</p>
+<h1>Hunggerz Heavven</h1>
+<p>EAT GOOD • FEEL GOOD</p>
 
 <nav>
 <a href="#">Home</a>
-<a href="#">Menu</a>
-<a href="#">Gallery</a>
-<a href="#">Contact</a>
+<a href="#menu">Menu</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
 </nav>
 
 </header>
 
-<div class="hero">
-<h2>Best Indian • Chinese • Tandoor in Jajpur</h2>
-</div>
+<section class="hero">
 
-<section class="section">
-
-<h2>About Our Restaurant</h2>
-
-<p>Welcome to Hungerz Heavven Resto Cafe. We serve delicious Indian, Chinese and Tandoor dishes with amazing taste and quality.</p>
-
-<a class="call-btn" href="tel:7326921330">Call Now</a>
+<h2>Best <span>Indian • Chinese • Tandoor</span> Food in Jajpur</h2>
 
 </section>
 
 <section class="section">
 
-<h2>Our Menu</h2>
+<h2>About Us</h2>
+
+<p>Welcome to Hunggerz Heavven Resto Cafe. Enjoy delicious food with great ambience and taste. Perfect place for friends and family.</p>
+
+<a class="btn" href="tel:7326921330">Call Now</a>
+
+</section>
+
+<section class="section" id="menu">
+
+<h2>Our Special Menu</h2>
 
 <div class="menu">
 
 <div class="card">
 <h3>Chicken Biryani</h3>
-<p>Special Taste</p>
+<p>₹180</p>
 </div>
 
 <div class="card">
 <h3>Tandoori Chicken</h3>
-<p>Smoky Flavor</p>
+<p>₹220</p>
 </div>
 
 <div class="card">
 <h3>Veg Noodles</h3>
-<p>Chinese Style</p>
+<p>₹120</p>
 </div>
 
 <div class="card">
 <h3>Paneer Butter Masala</h3>
-<p>Indian Special</p>
+<p>₹160</p>
 </div>
 
 </div>
 
 </section>
 
-<section class="section">
+<section class="section" id="gallery">
 
-<h2>Gallery</h2>
+<h2>Food Gallery</h2>
 
 <div class="gallery">
 
-<img src="photo1.jpg">
-<img src="photo2.jpg">
-<img src="photo3.jpg">
+<img src="food1.jpg">
+<img src="food2.jpg">
+<img src="food3.jpg">
 
 </div>
 
 </section>
 
-<section class="section">
+<section class="section" id="contact">
 
-<h2>Visit Us</h2>
+<h2>Visit Our Restaurant</h2>
 
-<p>Dharma Road, Jajpur Town</p>
+<p>Jajpur Town, Odisha</p>
 
-<a class="call-btn" href="https://maps.app.goo.gl/JiJkRgBMzLVTy1MY7">Open Map</a>
+<a class="btn" href="https://maps.app.goo.gl/JiJkRgBMzLVTy1MY7">Open Location</a>
 
 </section>
 
 <footer>
 
-<p>© 2026 Hungerz Heavven Resto Cafe</p>
+<p>© 2026 Hunggerz Heavven Resto Cafe</p>
 <p>Phone: 7326921330</p>
 
 </footer>
